@@ -19,14 +19,14 @@ class LoginVM extends BaseViewModel {
 
   bool get signInBtnState => _signInBtnState;
 
-  void setSignInStatus(bool value) {
+  void setButtonStatus(bool value) {
     _signInBtnState = value;
     notifyListeners();
   }
 
   void onPressed() async {
     try {
-      setSignInStatus(true);
+      setButtonStatus(true);
       UserCredential? credential = await _authService.signInWithGoogle();
       if (credential != null) {
         User? user = credential.user;
@@ -43,7 +43,7 @@ class LoginVM extends BaseViewModel {
     } catch (e, s) {
       _easyLoadingService.showToast(FAIL_MSG);
     }
-    setSignInStatus(false);
+    setButtonStatus(false);
   }
 
   void navigateTo(String route) {
