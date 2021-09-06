@@ -1,6 +1,6 @@
 # Leaderboard for Quaruntime Event
 
-Website developed using **flutter web** 💻 with stacked architecture(MVVM).
+Website developed using **flutter web**  with stacked architecture(MVVM).
 
 Don't know flutter [Click here](https://flutter.dev/) to learn more.
 
